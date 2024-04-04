@@ -1,0 +1,16 @@
+{
+  "exclude": ["node_modules", "**/*.stories.tsx"],
+  "extends": "@repo/typescript-config/vite.json",
+  "compilerOptions": {
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noFallthroughCasesInSwitch": true,
+    "noEmit": true,
+    "strict": true,
+    "jsx": "react-jsx",
+    "rootDir": ".",
+    "outDir": "dist"
+  },
+  "include": ["src", "index.ts"]
+}
