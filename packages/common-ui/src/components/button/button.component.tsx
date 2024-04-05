@@ -5,7 +5,7 @@ export interface ButtonProps {
 }
 
 export const Button: React.FC<ButtonProps> = ({ children }) => {
-  return <button style={{ background: "yellow" }}>{children}</button>;
+  return <button style={{ background: "green" }}>{children}</button>;
 };
 
 export default Button;

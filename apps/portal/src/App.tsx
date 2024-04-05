@@ -1,12 +1,13 @@
-import { Button } from "@repo/common-ui";
-import "./App.css";
+import './App.css'
 
-function App() {
-  return (
-    <>
-      <Button>RED BUTTON</Button>
-    </>
-  );
-}
+import { Button } from '@repo/common-ui'
+import { FormikInput } from '@repo/common-ui/lib'
 
-export default App;
+export const App = () => (
+  <div>
+    <Button>RED BUTTON</Button>
+    <FormikInput name="formik" placeholder="this is not built from dist" />
+  </div>
+)
+
+export default App

@@ -1,19 +1,41 @@
 module.exports = {
-  env: {
-    node: true,
-  },
-  parser: "@typescript-eslint/parser",
+  env: { browser: true, es2020: true },
   extends: [
+    "airbnb",
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:import/recommended",
     "prettier",
   ],
-  plugins: ["@typescript-eslint"],
   parserOptions: {
     sourceType: "module",
-    ecmaVersion: 2020,
+    ecmaVersion: "latest",
   },
+  ignorePatterns: ["dist", ".eslintrc.cjs", "vite.config.ts"],
+  parser: "@typescript-eslint/parser",
+  plugins: ["simple-import-sort", "prefer-arrow", "import"],
   rules: {
-    "@typescript-eslint/no-non-null-assertion": "off",
+    "import/no-named-as-default": 0,
+    "react/function-component-definition": ["off"],
+    "import/extensions": ["off"],
+    "import/no-unresolved": "error",
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "react/jsx-filename-extension": ["off"],
+    "react/react-in-jsx-scope": ["off"],
+    "prefer-arrow/prefer-arrow-functions": [
+      "error",
+      {
+        disallowPrototype: true,
+        singleReturnOnly: false,
+        classPropertiesAllowed: false,
+      },
+    ],
+    "no-restricted-syntax": [
+      "error",
+      "FunctionExpression",
+      "FunctionDeclaration",
+    ],
   },
 };
