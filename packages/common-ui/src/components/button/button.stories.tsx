@@ -1,20 +1,15 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { Button } from "./button.component";
+import type { Meta } from "@storybook/react";
+import { Button as UIButton } from "./button.component";
+import React from "react";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
+
 const meta = {
   title: "Example/Button",
-  component: Button,
-  parameters: {
-    layout: "centered",
-  },
-} satisfies Meta<typeof Button>;
+  component: UIButton,
+} satisfies Meta<typeof UIButton>;
 
-export default meta;
-type Story = StoryObj<typeof meta>;
-
-export const Primary: Story = {
-  args: {
-    children: "Button",
-  },
+export const Button = () => {
+  return <UIButton>I am a Button</UIButton>;
 };
+export default meta;

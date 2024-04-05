@@ -3,14 +3,17 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "main": "dist/common-ui.cjs",
-  "types": "dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
     "dev": "storybook dev -p 6006",
     "build": "tsc && vite build",
+    "watch": "vite build --watch",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
   "devDependencies": {
